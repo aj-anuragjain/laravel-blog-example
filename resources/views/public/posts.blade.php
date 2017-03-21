@@ -36,7 +36,7 @@
 
 {{--meta robots--}}
 @section("meta-robots")
-    index, follow, noarchive
+    noindex, nofollow, archive
 @endsection
 
 
@@ -45,6 +45,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12 col-md-8 col-lg-9">
+                <h2>All Posts</h2>
                 @foreach($posts as $post)
                     <a href="/blogs/{{ $post->id }}">
                         <div class="panel panel-default">
@@ -55,8 +56,7 @@
                                 {{ substr($post->post_detail->post_text, 0, 360) }}... Read More
                             </div>
                             <div class="panel-footer">
-                                {{ $post->user->name }}
-                                {{ $post->updated_at }}
+                                {{ $post->user->name }} | {{ $post->updated_at }}
                             </div>
                         </div>
                     </a>

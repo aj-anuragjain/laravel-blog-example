@@ -12,8 +12,7 @@
                         {{ $post->post_detail->post_text }}
                     </div>
                     <div class="panel-footer">
-                        {{ $post->user->name }}
-                        {{ $post->updated_at }}
+                        {{ $post->user->name }} | {{ $post->updated_at }}
                     </div>
                 </div>
             </div>

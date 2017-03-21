@@ -29,6 +29,7 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
     </head>
     <body>
+        @include("public.component.navbar")
         @yield("content")
         <script type="text/javascript" src="/assets/js/vendor.common.js"></script>
         <script type="text/javascript" src="/assets/js/app.js"></script>
